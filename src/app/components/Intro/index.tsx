@@ -1,14 +1,26 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import { useActiveSectionContext } from "../../context/active-section-context";
 
-export default function index() {
+export default function Intro() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    amount: 0.5,
+  });
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  useEffect(() => {
+    if (isInView && Date.now() - timeOfLastClick > 1000) {
+      setActiveSection("Home");
+    }
+  }, [isInView, timeOfLastClick, setActiveSection]);
   return (
-    <section className="mb-28 max-w-[50rem] ">
+    <section className="mb-28 max-w-[50rem] scroll-mt-28" id="home" ref={ref}>
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

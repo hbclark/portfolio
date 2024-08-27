@@ -2,7 +2,13 @@
 import { motion } from "framer-motion";
 import { links } from "@/src/lib/data";
 import Link from "next/link";
-export default function page() {
+
+import clsx from "clsx";
+import { useActiveSectionContext } from "../../context/active-section-context";
+
+export default function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <header className="z-[999] relative pb-24">
       <motion.div
@@ -16,16 +22,36 @@ export default function page() {
           {links.map((link) => (
             <motion.li
               key={link.hash}
-              className="h-3/4 flex items-center justify-center"
+              className="h-3/4 flex items-center justify-center relative"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, rase: "easeInOut" }}
             >
               <Link
                 href={link.hash}
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition"
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+                  {
+                    "text-gray-950": activeSection === link.name,
+                  }
+                )}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 {link.name}
+                {link.name === activeSection && (
+                  <motion.span
+                    className="bg-gray-200 rounded-full absolute inset-0 -z-10"
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}

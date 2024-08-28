@@ -3,22 +3,13 @@ import { SectionHeading } from "..";
 import { projectsData } from "@/src/lib/data";
 import Project from "../Project";
 import React, { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
-import { useActiveSectionContext } from "../../context/active-section-context";
+
+import { useSectionInView } from "@/src/lib/hooks";
 
 export default function Projects() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    amount: 0.35,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  useEffect(() => {
-    if (isInView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Projects");
-    }
-  }, [isInView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("Projects");
   return (
-    <section id="projects" className="scroll-mt-28" ref={ref}>
+    <section id="projects" className="scroll-mt-28 mb-28" ref={ref}>
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (

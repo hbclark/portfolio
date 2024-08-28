@@ -1,12 +1,10 @@
 "use client";
-import { links } from "@/src/lib/data";
 import { useState, createContext, useContext } from "react";
-
-type SectionName = (typeof links)[number]["name"];
+import { TSectionName } from "@/src/lib/types";
 
 type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  activeSection: TSectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<TSectionName>>;
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
@@ -19,7 +17,7 @@ export default function ActiveSectionContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  const [activeSection, setActiveSection] = useState<TSectionName>("Home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
   return (
     <ActiveSectionContext.Provider

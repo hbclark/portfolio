@@ -5,20 +5,13 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { useEffect, useRef } from "react";
+
+import { useSectionInView } from "@/src/lib/hooks";
 import { useActiveSectionContext } from "../../context/active-section-context";
 
 export default function Intro() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    amount: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  useEffect(() => {
-    if (isInView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [isInView, timeOfLastClick, setActiveSection]);
+  const { ref } = useSectionInView("Home", 0.35);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section className="mb-28 max-w-[50rem] scroll-mt-28" id="home" ref={ref}>
       <div className="flex items-center justify-center">
@@ -78,6 +71,10 @@ export default function Intro() {
           className="group flex items-center gap-2 bg-gray-900 text-white px-7 py-3 rounded-full
           outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
           transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />

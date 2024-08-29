@@ -1,10 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import a2zimg from "@/public/a2z.png";
 
 export const links = [
@@ -63,6 +62,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "A2z Recycle Website",
+    description: "A public web app for a2z recycle company.",
+    tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
+    imageUrl: a2zimg,
+    webpageUrl: "https://a2z-clark.vercel.app/",
+  },
+  {
     title: "CorpComment",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
@@ -71,19 +77,12 @@ export const projectsData = [
     webpageUrl: "https://corpcomment-clark.vercel.app/",
   },
   {
-    title: "job board",
+    title: "Job board",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
-    webpageUrl: "https://a2z-clark.vercel.app/",
-  },
-  {
-    title: "A2z Recycle Website",
-    description: "A public web app for a2z recycle company.",
-    tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
-    imageUrl: a2zimg,
-    webpageUrl: "https://a2z-clark.vercel.app/",
+    webpageUrl: "https://jobboard-clark.vercel.app/",
   },
 ] as const;
 

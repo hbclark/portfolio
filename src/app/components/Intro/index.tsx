@@ -13,9 +13,13 @@ export default function Intro() {
   const { ref } = useSectionInView("Home", 0.35);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <section className="mb-28 max-w-[50rem] scroll-mt-28" id="home" ref={ref}>
+    <section
+      className="mb-28 pb-20 max-w-[50rem] scroll-mt-28"
+      id="home"
+      ref={ref}
+    >
       <div className="flex items-center justify-center">
-        <div className="relative">
+        <div className="relative my-10">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -28,7 +32,7 @@ export default function Intro() {
               height="192"
               quality={95}
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+              className="h-24 w-24  rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
             <motion.span
               className="text-4xl absolute bottom-0 right-0"
@@ -82,7 +86,7 @@ export default function Intro() {
         <a
           className="group flex items-center gap-2 mb-4 bg-white text-gray-700 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80
           transition"
-          href="public/CV.pdf"
+          href="Zhaohui_He_resume_Web_Developer.pdf"
           download
         >
           Download CV{" "}

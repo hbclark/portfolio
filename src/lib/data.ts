@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import a2zimg from "@/public/a2z.png";
 
 export const links = [
   {
@@ -76,11 +77,10 @@ export const projectsData = [
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    title: "A2z Recycle Website",
+    description: "A public web app for a2z recycle company.",
+    tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
+    imageUrl: a2zimg,
   },
 ] as const;
 

@@ -36,28 +36,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Glassmastering Engineer",
+    location: "Sydney NSW",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Led a team in receiving and processing media (CD/DVD, tape) from customers. Utilized software to convert media into specialized formats for machine recognition and sample creation.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2011-2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Certificate IV in Web Development",
+    location: "Sydney NSW",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Completed Certificate IV in Web Development, focusing on foundational web technologies and coding skills. Gained practical experience in front-end development and basic backend principles..",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023.7- - 2023.12",
+  },
+  {
+    title: "Diploma of Web Development",
+    location: "Sydney NSW",
+    description:
+      "Pursued a Diploma in Front-End and Back-End Development, enhancing skills in full-stack development. Acquired hands-on experience in building and maintaining dynamic web applications.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2024.2 - 2024.7",
   },
 ] as const;
 

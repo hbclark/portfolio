@@ -68,19 +68,22 @@ export const projectsData = [
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", , "HTML", "CSS"],
     imageUrl: corpcommentImg,
+    webpageUrl: "https://corpcomment-clark.vercel.app/",
   },
   {
-    title: "rmtDev",
+    title: "job board",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
+    webpageUrl: "https://a2z-clark.vercel.app/",
   },
   {
     title: "A2z Recycle Website",
     description: "A public web app for a2z recycle company.",
     tags: ["React", "Next.js", "Tailwind", "Framer Motion"],
     imageUrl: a2zimg,
+    webpageUrl: "https://a2z-clark.vercel.app/",
   },
 ] as const;
 

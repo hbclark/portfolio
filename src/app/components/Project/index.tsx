@@ -27,13 +27,13 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8  last:mb-0"
     >
-      <section className=" relative mb-3 sm:mb-8 last:mb-0 bg-gray-100 max-w-[42rem] border border-black/5 rounded-2xl overflow-hidden shadow-2xl sm:pr-8 sm:h-[20rem]  hover:bg-gray-200 transition group-even:pl-8 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white/80 ">
+      <section className=" relative mb-3 sm:mb-8 last:mb-0 bg-gray-100 max-w-[42rem] border border-black/5 rounded-2xl overflow-hidden shadow-2xl sm:pr-8 sm:h-[20rem]  hover:bg-gray-200 transition sm:group-even:pl-8 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white/80 ">
         <div
           className="flex flex-col pt-4 pb-7  px-5 sm:pl-10 sm:pr-2 sm:pt-3 sm:max-w-[50%] h-full
-      group-even:ml-[18rem] "
+      sm:group-even:ml-[18rem] "
         >
           <h3 className="text-2xl font-semibold ">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/80">
+          <p className="mt-2 mb-4 leading-relaxed text-gray-700 dark:text-white/80">
             {description}
           </p>
           <ul className="flex flex-wrap gap-2 sm:mt-auto ">
@@ -52,7 +52,7 @@ export default function Project({
           src={imageUrl}
           alt="Project I worked on"
           quality="95"
-          className="absolute top-8 -right-40 w-[28rem] rounded-t-lg shadow-2xl
+          className="absolute top-8 -right-40 w-[28rem] hidden sm:block rounded-t-lg shadow-2xl
         group-even:right-[initial] group-even:-left-40
         group-hover:-translate-x-3 group-hover:translate-y-3
         group-hover:-rotate-2

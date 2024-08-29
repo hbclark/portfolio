@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-3
        dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90 `}
       >
-        <div className="-z-10 bg-gradient-to-r from-[#f4e7e7] via-50% via-[#e5e3ef] to-[#e8e7ee] absolute h-[31.25rem] w-full dark:from-[#946263] dark:via-50% dark:via-[#78759c] dark:to-[#636394] "></div>
+        <div className="-z-10 bg-gradient-to-r from-[#f4e7e7] via-50% via-[#e5e3ef] to-[#e8e7ee] absolute h-[46rem] sm:h-[31.25rem] w-full dark:from-[#946263] dark:via-50% dark:via-[#78759c] dark:to-[#636394] "></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />

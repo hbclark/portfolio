@@ -68,7 +68,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 bg-gray-900 text-white px-7 py-3 rounded-full
+          className="group flex items-center mb-2 gap-2 bg-gray-900 text-white px-7 py-3 rounded-full
           outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105
           transition"
           onClick={() => {
@@ -80,7 +80,7 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group flex items-center gap-2 bg-white text-gray-700 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80
+          className="group flex items-center gap-2 mb-4 bg-white text-gray-700 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80
           transition"
           href="public/CV.pdf"
           download
@@ -90,7 +90,7 @@ export default function Intro() {
         </a>
         <a
           href="https://www.linkedin.com/in/zhaohui-he-b836524/"
-          className="flex items-center gap-2 bg-white  px-4 text-gray-700  py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105
+          className="flex items-center gap-2 mb-4 bg-white  px-4 text-gray-700  py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105
           transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80"
           target="_blank"
         >

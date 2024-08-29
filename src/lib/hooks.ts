@@ -14,5 +14,5 @@ export function useSectionInView(sectionName: TSectionName, amount = 0.5) {
       setActiveSection(sectionName);
     }
   }, [isInView, timeOfLastClick, setActiveSection, sectionName]);
-  return { ref, setActiveSection, timeOfLastClick };
+  return { ref, setActiveSection, timeOfLastClick, isInView };
 }

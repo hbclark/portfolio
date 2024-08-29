@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import ThemeSwitch from "./Theme-switch";
 export {
   Header,
   Intro,
@@ -19,4 +20,5 @@ export {
   Experience,
   Contact,
   Footer,
+  ThemeSwitch,
 };

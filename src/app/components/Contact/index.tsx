@@ -12,7 +12,7 @@ function SubmitButton() {
 
   return (
     <button
-      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] text-white bg-gray-900 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 transition-all disabled:scale-100 disabled:opacity-65 "
+      className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] text-white bg-gray-900 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950 transition-all disabled:scale-100 disabled:opacity-65 dark:bg-white/10  "
       disabled={pending}
     >
       {pending ? (
@@ -52,7 +52,7 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p>
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <span className="underline text-blue-500">
           <a href="mailto:skla2003@hotmail.com">skla2003@hotmail.com</a>
@@ -64,11 +64,15 @@ export default function Contact() {
       ) : null}
       {state.data && <p className=" mt-4 text-green-500">Message sent</p>}
 
-      <form className="flex flex-col mt-10" action={formAction} ref={formRef}>
+      <form
+        className="flex flex-col mt-10 dark:text-black/80"
+        action={formAction}
+        ref={formRef}
+      >
         <input
           type="email"
           name="senderEmail"
-          className="h-14  pl-2 rounded-lg borderBlack"
+          className="h-14  pl-2 rounded-lg borderBlack dark:focus:bg-opacity-100 transition-all dark:bg-white  dark:bg-opacity-80 dark:outline-none"
           placeholder="Your email"
           required
         />

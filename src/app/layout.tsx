@@ -1,5 +1,6 @@
-import { Footer, Header } from "./components";
+import { Footer, Header, ThemeSwitch } from "./components";
 import ActiveSectionContextProvider from "./context/active-section-context";
+import ThemeContextProvider from "./context/themeContext";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -18,16 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative h-[5000px]`}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-3
+       dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90 `}
       >
-        {/* <div className="bg-[#fbe2e3] absolute -z-10 top-[-6rem] right-[-11rem] h-[31.25rem] w-1/3 rounded-full blur-[10rem] sm:w-1/2"></div>
-        <div className="bg-[#3320c4] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-2/3 rounded-full blur-[10rem] sm:w-1/2 md:left-[-33rem] lg:left-[-28rem] xl:left-[-25rem] 2xl:left-[-5rem]"></div> */}
-        <div className="-z-10 bg-gradient-to-r from-[#fbe2e3] to-[#dbd7fb] absolute h-[31.25rem] w-full"></div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ActiveSectionContextProvider>
+        <div className="-z-10 bg-gradient-to-r from-[#f4e7e7] via-50% via-[#e5e3ef] to-[#e8e7ee] absolute h-[31.25rem] w-full dark:from-[#946263] dark:via-50% dark:via-[#78759c] dark:to-[#636394] "></div>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

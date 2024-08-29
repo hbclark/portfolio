@@ -2,15 +2,16 @@
 import { useState, createContext, useContext } from "react";
 import { TSectionName } from "@/src/lib/types";
 
-type ActiveSectionContextType = {
+type TActiveSectionContext = {
   activeSection: TSectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<TSectionName>>;
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
+export const ActiveSectionContext = createContext<TActiveSectionContext | null>(
+  null
+);
 
 export default function ActiveSectionContextProvider({
   children,

@@ -80,7 +80,7 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
-          className="group flex items-center gap-2 bg-white text-gray-700 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 cursor-pointer border border-black/10
+          className="group flex items-center gap-2 bg-white text-gray-700 px-7 py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80
           transition"
           href="public/CV.pdf"
           download
@@ -91,14 +91,14 @@ export default function Intro() {
         <a
           href="https://www.linkedin.com/in/zhaohui-he-b836524/"
           className="flex items-center gap-2 bg-white  px-4 text-gray-700  py-3 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105
-          transition cursor-pointer border border-black/10"
+          transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80"
           target="_blank"
         >
           <BsLinkedin />
         </a>
         <a
           className=" flex items-center gap-2 bg-white text-[1.35rem] px-4 text-gray-700  py-3 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105
-          transition cursor-pointer border border-black/10"
+          transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/80"
           href="https://github.com/hbclark"
           target="_blank"
         >

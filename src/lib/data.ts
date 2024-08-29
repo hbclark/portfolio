@@ -96,12 +96,9 @@ export const skillsData = [
   "Tailwind",
   "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
+  "MySQL",
+
   "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "GSAP",
   "Framer Motion",
 ] as const;
